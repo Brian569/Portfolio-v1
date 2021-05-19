@@ -10,3 +10,9 @@ class ProfileForm(forms.ModelForm):
 
         model = Profile
         fields = ('email', 'image')
+
+class LetterForm(forms.Form):
+    """LetterForm definition."""
+    your_name = forms.CharField(label='Your Name', max_length=100)
+    email = forms.EmailField(label='Email')
+    text = forms.CharField()

@@ -1,11 +1,19 @@
 from django.shortcuts import render, redirect
 from .models import Profile
-from .forms import ProfileForm
+from .forms import ProfileForm, LetterForm
 
 def home(request):
     profile = Profile.objects.all()
 
-    return render(request, 'home.html', {'profile': profile})
+    if request.method == 'POST':
+        form = LetterForm(request.POST)
+        if form.is_valid():
+            print('valid')
+
+    else:
+        form = LetterForm()
+
+    return render(request, 'home.html', {'profile': profile, 'letter': form})
 
 def upload(request):
 
