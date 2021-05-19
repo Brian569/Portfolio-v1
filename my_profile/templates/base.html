@@ -1,0 +1,160 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chela+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+    {% block styles %}
+    {% bootstrap_css %}
+        
+    {% endblock styles %}
+        
+</head>
+<body>
+    
+    {% block content %}
+        
+    {% endblock content %}
+    <hr>        
+    <footer>
+        <p><a href="">
+            <span class="material-icons">
+                arrow_upward
+                </span>
+        </a></p>
+        <h6>
+            Copyright (c) 2021 BrianNderitu
+        </h6>
+        
+    </footer>
+</body>
+<style>
+    body{
+        background-color: rgb(5, 51, 82);
+        color: #fff;
+    }
+    .one{
+        margin-bottom: 5vmin;
+       
+    }
+    .logo{
+        font-family: 'Chela One', cursive;
+        color: rgb(14, 202, 105);
+        margin-top: 5vmin;
+        margin-left: 10vmin;
+    }
+
+    nav{
+        font-family: 'Josefin Sans', sans-serif;
+        /* z-index: 1; */
+        float: right;
+    }
+    nav ul li {
+        display: inline-block;
+        margin-right: 10vmin;
+    }
+
+    nav ul li a{
+        color: #fff;
+        font-size: 1.3rem;
+        
+    }
+
+    nav ul li a:hover{
+        text-decoration: none;
+        color:  rgb(14, 202, 105); 
+    }
+    #about h2{
+        margin-top: 20vmin;
+    }
+
+    .container{
+        margin-top: 7vmin;
+    }
+    .container h6, h3{
+        margin-top: 8vmin;
+        font-size: 2rem;
+        color: rgb(181, 181, 181);
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .container h6{
+        margin-top: 10vmin;
+    }
+
+    .container h1{
+        margin-top: 7vmin;
+        font-family: 'Ultra', serif;
+        font-size: 4rem;
+    }
+
+
+button{
+  width: 200px;
+  padding: 15px ;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #18e47e;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-family: cursive
+  
+ 
+}
+button a{
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+}
+button a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+.span span{
+  background: #427e60;
+  height: 100%;
+  width: 0;   width: 0;
+border-radius: 25px;
+position: absolute;
+left: 0;
+bottom: 0;
+z-index: -1;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover span{
+  width: 100%;
+
+}
+button:hover{
+  border: none;
+}
+
+a{
+        height: 20vmin;
+        color: rgb(93, 225, 137);
+        margin-right: 5vmin;
+    }
+   
+</style>
+
+</html>

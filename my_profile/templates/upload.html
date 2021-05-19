@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+{% include 'navbar.html' %}
+    <div class="container">
+        <form action="{% url 'upload' %}" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+
+        {% bootstrap_form form%}
+
+        <input type="submit" value="Upload">
+        </form>
+    </div>
+{% endblock content %}
+    
