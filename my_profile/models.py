@@ -7,6 +7,7 @@ class Profile(models.Model):
     # phone_number = PhoneNumberField()
     image = CloudinaryField()
     email = models.EmailField()
+    contact_me = CloudinaryField()
 
     def __str__(self):
         return self.phone_number

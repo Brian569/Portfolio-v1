@@ -9,7 +9,7 @@ class ProfileForm(forms.ModelForm):
         """Meta definition for Profileform."""
 
         model = Profile
-        fields = ('email', 'image')
+        fields = ('email', 'image', 'contact_me')
 
 class LetterForm(forms.Form):
     """LetterForm definition."""
