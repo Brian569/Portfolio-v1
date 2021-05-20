@@ -5,6 +5,7 @@
 {% block content %}
 {% include 'navbar.html' %}
     <div class="container">
+        <h2>Profile</h2>
         <form action="{% url 'upload' %}" enctype="multipart/form-data" method="post">
         {% csrf_token %}
 
@@ -12,6 +13,23 @@
 
         <input type="submit" value="Upload">
         </form>
+
+        <br><br><br><br>
+
+        <h2>Pictures</h2>
+        <form action="{% url 'upload' %}" enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+    
+            {% bootstrap_form pictures%}
+    
+            <input type="submit" value="Upload">
+            </form>
     </div>
+
+    <style>
+        h2{
+            color: rgb(147, 232, 147);
+        }
+    </style>
 {% endblock content %}
     
